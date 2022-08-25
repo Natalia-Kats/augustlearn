@@ -32,11 +32,11 @@ stages:
       displayName: Upload nuget package artifact
       artifact: nuget-package
 
-- job: release
-  displayName: Release on Nuget
-  dependsOn: build
-  container: mcr.microsoft.com/dotnet/sdk:6.0
-  steps:
+  - job: release
+    displayName: Release on Nuget
+    dependsOn: build
+    container: mcr.microsoft.com/dotnet/sdk:6.0
+    steps:
     - download: current
       displayName: Download nuget package artifact
       artifact: nuget-package
