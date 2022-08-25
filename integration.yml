@@ -29,5 +29,5 @@ stages:
         -p:Version=1.0.0
       displayName: Package dotnet tool
     - publish: pkg/Contoso.Spaces.Console.1.0.0.nupkg
-      displayName: Upload package artifact
+      displayName: Upload nuget package artifact
       artifact: nuget-package
